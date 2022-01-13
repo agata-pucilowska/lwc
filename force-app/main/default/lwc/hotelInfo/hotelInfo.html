@@ -1,0 +1,16 @@
+<template>
+   <div>
+         <lightning-card title={hotelInfo.hotelName}>
+            <lightning-button label="Reserve" slot="actions"></lightning-button>
+           <div class="slds-p-horizontal_small">
+                <ul>
+                    <li>Room info: {hotelInfo.roomInfo}</li>
+                    <li>Price: {hotelInfo.price}</li>
+                </ul>
+            </div>
+            <div slot="footer" class="slds-text-heading_large slds-text-color_success">
+                {hotelInfo.rating}
+            </div>
+        </lightning-card>
+    </div>
+</template>

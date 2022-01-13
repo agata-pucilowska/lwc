@@ -1,0 +1,11 @@
+<template>
+    <template for:each={carList} for:item="car">
+        <div class="slds-m-around_medium " key={car.number}>
+            <lightning-card key={car.number} title={car.owner} icon-name="custom:custom22">
+                <p>Car number: {car.number}</p>
+                <p>Car brand: {car.brand}</p>
+                <p>Car color: {car.color}</p>
+            </lightning-card>
+        </div>
+    </template>
+</template>

@@ -1,0 +1,16 @@
+<template>
+
+    <template iterator:car={carList}>
+        <div key={car.value.number}>
+            <div if:true={car.first} class="list-first"></div>
+            <!--{iteratorName.value.propertyName}-->
+            <lightning-card title={car.value.owner} icon-name="custom:custom24">
+            <p>Car number: {car.value.number}</p>
+            <p>Car brand: {car.value.brand}</p>
+            <p>Car color: {car.value.color}</p>
+            </lightning-card>
+        <div if:true={car.last} class="list-last"></div>
+        </div>
+    </template>
+
+</template>

@@ -1,0 +1,7 @@
+<template>
+    <div class="slds-box slds-grid slds-gutters slds-wrap">
+        <template for:each={allHotelsInfo} for:item="hotel">
+            <c-hotel-info key={hotel.hotelName} hotel-info={hotel} class="slds-col"></c-hotel-info>
+        </template>
+    </div>
+</template>
