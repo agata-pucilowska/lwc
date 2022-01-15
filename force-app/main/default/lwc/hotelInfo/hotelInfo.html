@@ -1,16 +1,23 @@
 <template>
-   <div>
-         <lightning-card title={hotelInfo.hotelName}>
-            <lightning-button label="Reserve" slot="actions"></lightning-button>
-           <div class="slds-p-horizontal_small">
-                <ul>
-                    <li>Room info: {hotelInfo.roomInfo}</li>
-                    <li>Price: {hotelInfo.price}</li>
-                </ul>
-            </div>
-            <div slot="footer" class="slds-text-heading_large slds-text-color_success">
-                {hotelInfo.rating}
-            </div>
-        </lightning-card>
+   <div class="slds-align_absolute-center slds-card" style="height:400px; width:350px">
+    <lightning-card title={hotelInfo.place} >
+        <div class="hotelInfo">
+        <lightning-button label="Reserve" slot="actions" onclick={handleReservation}></lightning-button>
+        <div class="slds-p-horizontal_small slds-p-vertical_large">
+            <img src={hotelInfo.image} width="320px"/>
+            <ul>
+                <li>Room info: {hotelInfo.roomInfo}</li>
+                <li>Price: {hotelInfo.price}</li>
+            </ul>
+        </div>
+        <lightning-button variant="brand" label="Show Hotel Details" onclick={handleHotelDetail} class="slds-m-around_medium"></lightning-button>
+         <template if:true={showModal}>
+            <c-hotel-details hotel-info={hotelInfo} onclose={handleHotelDetail}></c-hotel-details>
+        </template>
+        <div slot="footer" class="slds-align_absolute-center font">
+            {hotelInfo.rating}
+        </div>
+    </div>
+    </lightning-card>
     </div>
 </template>

@@ -1,0 +1,12 @@
+.hotelInfo{
+    width:300px;
+}
+
+.borderLine{
+    border:1px solid blue;
+}
+
+.font{
+    font-size: 2rem;
+    font-weight: 800;
+}
